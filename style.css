@@ -29,50 +29,69 @@ body {
   justify-content: space-between;
   background: rgba(0,0,0,0.4);
   backdrop-filter: blur(10px);
-}
-
-.navbar a {
-  margin-left: 20px;
-  color: #94a3b8;
-  text-decoration: none;
+  z-index: 10;
 }
 
 /* HERO */
 .hero {
   text-align: center;
-  padding: 140px 20px 80px;
+  padding: 160px 20px 100px;
+  max-width: 900px;
+  margin: auto;
 }
 
+/* NAME */
 .hero h1 {
   font-size: 64px;
+  margin-bottom: 15px;
   background: linear-gradient(90deg, #3b82f6, #22c55e);
   -webkit-background-clip: text;
   color: transparent;
 }
 
+/* ROLE */
 #typing {
-  margin: 10px 0;
+  font-size: 22px;
+  margin-bottom: 20px;
   color: #94a3b8;
 }
 
+/* HEADLINE */
 .headline {
-  max-width: 700px;
-  margin: auto;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 25px;
   color: #94a3b8;
 }
 
+/* HIGHLIGHT BLOCK */
 .highlight {
-  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.highlight p {
+  margin: 6px 0;
+  font-size: 16px;
 }
 
 /* BUTTONS */
+.cta {
+  margin-top: 20px;
+}
+
 .cta a {
-  margin: 10px;
+  margin: 8px;
   padding: 12px 24px;
   background: linear-gradient(90deg, #3b82f6, #22c55e);
   border-radius: 8px;
   color: white;
   text-decoration: none;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.cta a:hover {
+  transform: scale(1.05);
 }
 
 /* SECTIONS */
@@ -117,6 +136,17 @@ body {
 /* CTA */
 .final-cta {
   text-align: center;
+}
+
+/* RESPONSIVE FIX */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* EASTER EGG */
