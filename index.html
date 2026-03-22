@@ -7,24 +7,25 @@
 
 <link rel="stylesheet" href="style.css">
 
-<!-- GSAP for animations -->
+<!-- Libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
 
-<canvas id="particles"></canvas>
-<div class="cursor-glow"></div>
+<canvas id="bg"></canvas>
+<div class="cursor"></div>
 
 <!-- HERO -->
 <section class="hero">
   <h1>Akshit Rathod</h1>
   <h2 id="typing"></h2>
 
-  <p class="subtitle">
-    Building high-scale distributed systems handling 1GB+ data pipelines,
-    production-grade microservices & cloud-native architectures.
+  <p>
+    Backend Engineer designing distributed systems at scale.
+    Microservices • Kafka • Kubernetes • AWS
   </p>
 
   <div class="buttons">
@@ -34,41 +35,41 @@
 </section>
 
 <!-- IMPACT -->
-<section class="glass reveal">
+<section class="section reveal">
   <h2>Impact</h2>
-  <ul class="impact-grid">
-    <li>🚀 1GB+ pipelines</li>
-    <li>⚙️ 6+ microservices</li>
-    <li>⚡ Performance optimized</li>
-    <li>🛡️ Zero production issues</li>
-  </ul>
+  <div class="cards">
+    <div>🚀 1GB+ Data Pipelines</div>
+    <div>⚙️ 6+ Microservices</div>
+    <div>⚡ High Throughput APIs</div>
+    <div>🛡️ Production Stability</div>
+  </div>
 </section>
 
-<!-- PROJECT -->
-<section class="glass reveal">
-  <h2>Flagship Project</h2>
-  <h3>Healthcare Claims System</h3>
-  <p>Distributed microservices using Spring Boot + Kafka</p>
-  <p class="highlight">Handled 1GB+ files at scale</p>
-</section>
-
-<!-- SYSTEM DESIGN -->
-<section class="glass reveal">
+<!-- SYSTEM DESIGN VISUAL -->
+<section class="section reveal">
   <h2>System Design</h2>
-  <ul>
-    <li>Microservices architecture</li>
-    <li>Kafka async pipelines</li>
-    <li>AWS S3 migration</li>
-    <li>Splunk monitoring</li>
-  </ul>
+  <div class="diagram">
+    <div class="node">Client</div>
+    <div class="node">API Gateway</div>
+    <div class="node">Kafka</div>
+    <div class="node">Microservices</div>
+    <div class="node">AWS S3</div>
+  </div>
+</section>
+
+<!-- GITHUB -->
+<section class="section reveal">
+  <h2>GitHub Stats</h2>
+  <div id="github"></div>
 </section>
 
 <!-- CONTACT -->
-<section class="glass reveal contact">
+<section class="section reveal">
   <h2>Contact</h2>
   <p>akshitrathod1025@gmail.com</p>
 </section>
 
 <script src="script.js"></script>
+<script src="github.js"></script>
 </body>
 </html>

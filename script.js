@@ -1,75 +1,61 @@
-// =======================
-// Typing effect
-// =======================
-const text = "Backend Engineer | Microservices | Cloud";
+// Typing
+const text = "Backend Engineer | Distributed Systems";
 let i = 0;
-
 function type() {
   if (i < text.length) {
-    document.getElementById("typing").innerHTML += text.charAt(i);
+    document.getElementById("typing").innerHTML += text[i];
     i++;
     setTimeout(type, 40);
   }
 }
 type();
 
-// =======================
-// Cursor Glow
-// =======================
-document.addEventListener("mousemove", (e) => {
-  const glow = document.querySelector(".cursor-glow");
-  glow.style.left = e.clientX - 150 + "px";
-  glow.style.top = e.clientY - 150 + "px";
+// Cursor
+document.addEventListener("mousemove", e => {
+  document.querySelector(".cursor").style.transform =
+    `translate(${e.clientX}px, ${e.clientY}px)`;
 });
 
-// =======================
-// Scroll Animation (GSAP)
-// =======================
+// Scroll animation
 gsap.utils.toArray(".reveal").forEach(el => {
   gsap.to(el, {
     opacity: 1,
     y: 0,
     duration: 1,
-    scrollTrigger: {
-      trigger: el,
-      start: "top 80%"
-    }
+    scrollTrigger: { trigger: el }
   });
 });
 
-// =======================
-// PARTICLES SYSTEM
-// =======================
-const canvas = document.getElementById("particles");
-const ctx = canvas.getContext("2d");
+// THREE.JS background
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, innerWidth/innerHeight, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer({ canvas: document.querySelector("#bg") });
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+renderer.setSize(innerWidth, innerHeight);
+camera.position.z = 5;
 
-let particles = [];
+const geometry = new THREE.BufferGeometry();
+const vertices = [];
 
-for (let i = 0; i < 80; i++) {
-  particles.push({
-    x: Math.random() * canvas.width,
-    y: Math.random() * canvas.height,
-    r: Math.random() * 2
-  });
+for (let i = 0; i < 5000; i++) {
+  vertices.push(
+    (Math.random() - 0.5) * 10,
+    (Math.random() - 0.5) * 10,
+    (Math.random() - 0.5) * 10
+  );
 }
 
+geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+
+const material = new THREE.PointsMaterial({ color: 0x3b82f6, size: 0.02 });
+const points = new THREE.Points(geometry, material);
+
+scene.add(points);
+
 function animate() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  particles.forEach(p => {
-    ctx.beginPath();
-    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-    ctx.fillStyle = "white";
-    ctx.fill();
-
-    p.y += 0.3;
-    if (p.y > canvas.height) p.y = 0;
-  });
-
   requestAnimationFrame(animate);
+  points.rotation.y += 0.001;
+  renderer.render(scene, camera);
 }
 
 animate();
