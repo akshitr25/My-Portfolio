@@ -7,7 +7,6 @@
 
 <link rel="stylesheet" href="style.css">
 
-<!-- Libraries -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -16,60 +15,74 @@
 <body>
 
 <canvas id="bg"></canvas>
-<div class="cursor"></div>
 
 <!-- HERO -->
 <section class="hero">
   <h1>Akshit Rathod</h1>
   <h2 id="typing"></h2>
 
-  <p>
-    Backend Engineer designing distributed systems at scale.
-    Microservices • Kafka • Kubernetes • AWS
+  <p class="headline">
+    Backend Engineer with 3.5+ years building scalable microservices,
+    processing 1GB+ data pipelines, and delivering near-zero production failures.
   </p>
 
-  <div class="buttons">
-    <a href="assets/resume.pdf">Resume</a>
+  <div class="cta">
+    <a href="assets/resume.pdf">View Resume</a>
     <a href="https://github.com/akshitr25">GitHub</a>
   </div>
 </section>
 
 <!-- IMPACT -->
 <section class="section reveal">
-  <h2>Impact</h2>
+  <h2>What I Deliver</h2>
   <div class="cards">
-    <div>🚀 1GB+ Data Pipelines</div>
-    <div>⚙️ 6+ Microservices</div>
-    <div>⚡ High Throughput APIs</div>
-    <div>🛡️ Production Stability</div>
+    <div>🚀 1GB+ data pipelines</div>
+    <div>⚙️ 6+ production microservices</div>
+    <div>⚡ High throughput APIs</div>
+    <div>🛡️ Near-zero production issues</div>
   </div>
 </section>
 
-<!-- SYSTEM DESIGN VISUAL -->
+<!-- SYSTEM DESIGN -->
 <section class="section reveal">
-  <h2>System Design</h2>
-  <div class="diagram">
-    <div class="node">Client</div>
-    <div class="node">API Gateway</div>
-    <div class="node">Kafka</div>
-    <div class="node">Microservices</div>
-    <div class="node">AWS S3</div>
+  <h2>How I Build Systems</h2>
+
+  <div class="flow">
+    <div>Client</div>
+    <div>API Gateway</div>
+    <div>Kafka</div>
+    <div>Microservices</div>
+    <div>AWS S3</div>
   </div>
+</section>
+
+<!-- EXPERIENCE STORY -->
+<section class="section reveal">
+  <h2>Experience</h2>
+
+  <p>
+    At TCS, I engineered backend systems for healthcare and telecom clients like Optum & Verizon.
+    Designed distributed microservices using Spring Boot and Kafka, optimized APIs,
+    and led cloud migration to AWS S3 with Kubernetes orchestration.
+  </p>
 </section>
 
 <!-- GITHUB -->
 <section class="section reveal">
-  <h2>GitHub Stats</h2>
+  <h2>Proof of Work</h2>
   <div id="github"></div>
 </section>
 
-<!-- CONTACT -->
-<section class="section reveal">
-  <h2>Contact</h2>
-  <p>akshitrathod1025@gmail.com</p>
+<!-- CTA -->
+<section class="section reveal final-cta">
+  <h2>Let’s Build Something Scalable</h2>
+  <p>I’m actively looking for backend roles (20–30 LPA range)</p>
+  <a href="mailto:akshitrathod1025@gmail.com">Contact Me</a>
 </section>
 
 <script src="script.js"></script>
 <script src="github.js"></script>
+<script src="analytics.js"></script>
+
 </body>
 </html>

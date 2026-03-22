@@ -3,28 +3,9 @@ body {
   background: black;
   color: white;
   font-family: 'Inter', sans-serif;
-  overflow-x: hidden;
 }
 
-/* 3D canvas */
-#bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
-/* cursor */
-.cursor {
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  background: #3b82f6;
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-/* hero */
+/* HERO */
 .hero {
   text-align: center;
   padding: 120px;
@@ -32,45 +13,47 @@ body {
 
 h1 {
   font-size: 70px;
-  background: linear-gradient(90deg, #3b82f6, #22c55e);
+  background: linear-gradient(90deg,#3b82f6,#22c55e);
   -webkit-background-clip: text;
   color: transparent;
 }
 
-/* sections */
-.section {
-  padding: 80px 40px;
+.headline {
+  max-width: 700px;
+  margin: auto;
+  color: #94a3b8;
 }
 
-/* cards */
+/* CTA */
+.cta a {
+  margin: 10px;
+  padding: 12px 25px;
+  background: linear-gradient(90deg,#3b82f6,#22c55e);
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+}
+
+/* CARDS */
 .cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2,1fr);
   gap: 20px;
 }
 
-.cards div {
-  padding: 20px;
-  background: rgba(255,255,255,0.05);
+/* FLOW */
+.flow {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flow div {
+  padding: 15px;
+  background: #1e293b;
   border-radius: 10px;
 }
 
-/* diagram */
-.diagram {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.node {
-  padding: 15px;
-  background: #1e293b;
-  border-radius: 8px;
-  margin: 10px;
-}
-
-/* reveal */
-.reveal {
-  opacity: 0;
-  transform: translateY(50px);
+/* FINAL CTA */
+.final-cta {
+  text-align: center;
 }

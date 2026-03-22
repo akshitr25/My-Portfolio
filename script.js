@@ -1,6 +1,7 @@
-// Typing
-const text = "Backend Engineer | Distributed Systems";
+// typing
+const text = "Backend Engineer | Distributed Systems | Cloud";
 let i = 0;
+
 function type() {
   if (i < text.length) {
     document.getElementById("typing").innerHTML += text[i];
@@ -10,13 +11,7 @@ function type() {
 }
 type();
 
-// Cursor
-document.addEventListener("mousemove", e => {
-  document.querySelector(".cursor").style.transform =
-    `translate(${e.clientX}px, ${e.clientY}px)`;
-});
-
-// Scroll animation
+// scroll animation
 gsap.utils.toArray(".reveal").forEach(el => {
   gsap.to(el, {
     opacity: 1,
@@ -26,7 +21,7 @@ gsap.utils.toArray(".reveal").forEach(el => {
   });
 });
 
-// THREE.JS background
+// 3D background
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, innerWidth/innerHeight, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer({ canvas: document.querySelector("#bg") });
@@ -38,14 +33,10 @@ const geometry = new THREE.BufferGeometry();
 const vertices = [];
 
 for (let i = 0; i < 5000; i++) {
-  vertices.push(
-    (Math.random() - 0.5) * 10,
-    (Math.random() - 0.5) * 10,
-    (Math.random() - 0.5) * 10
-  );
+  vertices.push((Math.random()-0.5)*10,(Math.random()-0.5)*10,(Math.random()-0.5)*10);
 }
 
-geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices,3));
 
 const material = new THREE.PointsMaterial({ color: 0x3b82f6, size: 0.02 });
 const points = new THREE.Points(geometry, material);
@@ -57,5 +48,4 @@ function animate() {
   points.rotation.y += 0.001;
   renderer.render(scene, camera);
 }
-
 animate();
