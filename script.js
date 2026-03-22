@@ -1,4 +1,3 @@
-// Typing
 const text = "Backend Engineer | Distributed Systems | Cloud";
 let i = 0;
 
@@ -11,7 +10,7 @@ function type() {
 }
 type();
 
-// GSAP Scroll
+// GSAP
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.utils.toArray(".reveal").forEach(el => {
@@ -29,7 +28,7 @@ gsap.utils.toArray(".reveal").forEach(el => {
   );
 });
 
-// Subtle 3D background
+// Subtle background
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, innerWidth/innerHeight, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer({ canvas: document.querySelector("#bg"), alpha: true });
@@ -63,5 +62,4 @@ function animate() {
 }
 animate();
 
-// Secret console log 😏
 console.log("👋 You can’t see me");
