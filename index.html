@@ -4,10 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Akshit Rathod | Backend Engineer</title>
+
 <link rel="stylesheet" href="style.css">
+
+<!-- GSAP for animations -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
+
+<canvas id="particles"></canvas>
+<div class="cursor-glow"></div>
 
 <!-- HERO -->
 <section class="hero">
@@ -20,70 +28,45 @@
   </p>
 
   <div class="buttons">
-    <a href="assets/resume.pdf" target="_blank">Resume</a>
-    <a href="https://github.com/akshitr25" target="_blank">GitHub</a>
+    <a href="assets/resume.pdf">Resume</a>
+    <a href="https://github.com/akshitr25">GitHub</a>
   </div>
 </section>
 
 <!-- IMPACT -->
-<section class="glass">
+<section class="glass reveal">
   <h2>Impact</h2>
   <ul class="impact-grid">
-    <li>🚀 1GB+ data pipelines processed</li>
-    <li>⚙️ 6+ production microservices</li>
-    <li>⚡ Improved API performance</li>
-    <li>🛡️ Near-zero production issues</li>
+    <li>🚀 1GB+ pipelines</li>
+    <li>⚙️ 6+ microservices</li>
+    <li>⚡ Performance optimized</li>
+    <li>🛡️ Zero production issues</li>
   </ul>
 </section>
 
 <!-- PROJECT -->
-<section class="glass project">
+<section class="glass reveal">
   <h2>Flagship Project</h2>
-
-  <h3>Healthcare Claims Processing System</h3>
-
-  <p><strong>Problem:</strong> Large-scale medical file handling</p>
-  <p><strong>Solution:</strong> Distributed microservices with Spring Boot + Kafka</p>
-  <p><strong>Tech:</strong> Java, Docker, Kubernetes, AWS</p>
-
-  <p class="highlight">
-    ✔ Handled 1GB+ files reliably with scalable architecture
-  </p>
+  <h3>Healthcare Claims System</h3>
+  <p>Distributed microservices using Spring Boot + Kafka</p>
+  <p class="highlight">Handled 1GB+ files at scale</p>
 </section>
 
 <!-- SYSTEM DESIGN -->
-<section class="glass">
+<section class="glass reveal">
   <h2>System Design</h2>
   <ul>
-    <li>Distributed microservices architecture</li>
-    <li>Async processing with Kafka</li>
+    <li>Microservices architecture</li>
+    <li>Kafka async pipelines</li>
     <li>AWS S3 migration</li>
-    <li>Monitoring with Splunk</li>
+    <li>Splunk monitoring</li>
   </ul>
-</section>
-
-<!-- WHY ME -->
-<section class="glass">
-  <h2>Why Me?</h2>
-  <ul>
-    <li>✔ Real production experience (TCS, Healthcare, Telecom)</li>
-    <li>✔ Strong backend + cloud exposure</li>
-    <li>✔ Focus on scalability & performance</li>
-  </ul>
-</section>
-
-<!-- TECH STACK -->
-<section class="glass">
-  <h2>Tech Stack</h2>
-  <p class="tech">
-    Java • Spring Boot • Kafka • Docker • Kubernetes • AWS • MySQL
-  </p>
 </section>
 
 <!-- CONTACT -->
-<section class="glass contact">
+<section class="glass reveal contact">
   <h2>Contact</h2>
-  <p>📧 akshitrathod1025@gmail.com</p>
+  <p>akshitrathod1025@gmail.com</p>
 </section>
 
 <script src="script.js"></script>
