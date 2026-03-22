@@ -1,10 +1,14 @@
-document.querySelectorAll(".glass").forEach(el => {
-  el.addEventListener("mouseenter", () => {
-    el.style.transform = "scale(1.03)";
-    el.style.transition = "0.3s";
-  });
+// Typing effect
+const text = "Backend Engineer | Microservices | Cloud";
+let i = 0;
 
-  el.addEventListener("mouseleave", () => {
-    el.style.transform = "scale(1)";
-  });
-});
+function type() {
+  if (i < text.length) {
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(type, 40);
+  }
+}
+type();
+
+// Hover animation already handled in CSS
